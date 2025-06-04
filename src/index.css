@@ -1,0 +1,228 @@
+/* Add to the top or bottom of index.css */
+:root {
+  --primary: #1976d2;
+  --accent: #64FFDA;
+  --background: #111;
+  --white: #fff;
+  --body: #e0e0e0;
+}
+
+body, #root {
+  /* Adjust if your navbar is taller/shorter */
+  background: var(--background) !important;
+  color: var(--primary) !important; /* Use blue for default text */
+}
+
+.navbar {
+  background: #111 !important;
+  border-bottom: 1.5px solid #1976d2;
+  opacity: 1 !important;
+  z-index: 1050;
+}
+
+.navbar .navbar-brand {
+  color: var(--primary) !important;
+  background: none !important;
+  border-radius: 0 !important;
+  transition: none !important;
+}
+
+.navbar .navbar-brand:hover {
+  color: var(--primary) !important;
+  background: none !important;
+}
+
+.navbar .nav-link,
+.navbar .nav-link.nav-hover {
+  color: var(--primary) !important;
+  transition: color 0.2s, background 0.2s;
+}
+
+/* Make navbar links show pointer on hover */
+.navbar .nav-link,
+.navbar .nav-link.nav-apple {
+  cursor: pointer;
+}
+
+.navbar .nav-link.nav-hover:hover {
+  color: var(--white) !important;
+  background: var(--primary);
+  border-radius: 8px;
+}
+
+/* Modern nav link hover effect */
+.navbar .nav-link.nav-apple {
+  color: var(--accent) !important;
+  position: relative;
+  transition: color 0.2s;
+  font-weight: 500;
+  letter-spacing: 1px;
+  padding: 0.5rem 1rem;
+}
+
+.navbar .nav-link.nav-apple::after {
+  content: "";
+  display: block;
+  width: 0;
+  height: 2px;
+  background: linear-gradient(90deg, #1976d2 0%, #64FFDA 100%);
+  transition: width 0.3s;
+  position: absolute;
+  left: 0;
+  bottom: 0;
+}
+
+.navbar .nav-link.nav-apple:hover,
+.navbar .nav-link.nav-apple.active {
+  color: #fff !important;
+  background: rgba(25, 118, 210, 0.15);
+  border-radius: 8px;
+}
+
+.navbar .nav-link.nav-apple:hover::after,
+.navbar .nav-link.nav-apple.active::after {
+  width: 100%;
+}
+
+.btn-outline-primary {
+  color: var(--primary) !important;
+  border-color: var(--primary) !important;
+  background: var(--white) !important;
+  transition: background 0.2s, color 0.2s;
+}
+.btn-outline-primary:hover {
+  background: var(--primary) !important;
+  color: var(--white) !important;
+}
+
+section, .card, .footer, .bg-card {
+  background: var(--background) !important;
+  color: var(--primary) !important; /* Blue text */
+}
+
+.heading-gradient, h1, h2, h3, h4, h5, h6 {
+  background: linear-gradient(90deg, #1976d2 0%, #64FFDA 100%);
+  -webkit-background-clip: text;
+  -webkit-text-fill-color: transparent;
+  background-clip: text;
+  font-weight: 700;
+  letter-spacing: 1px;
+}
+
+p, span, li, label, input, textarea {
+  color: #64FFDA !important; /* Lighter blue shade for body text */
+}
+
+/* Footer: black background and white text */
+.footer {
+  background: #111 !important;
+  color: #fff !important;
+  border-top: none !important;
+}
+
+/* Resume button style */
+.resume-btn {
+  background: linear-gradient(90deg, #1976d2 0%, #64FFDA 100%);
+  color: #111 !important;
+  border: none;
+  border-radius: 8px;
+  font-weight: 600;
+  padding: 0.5rem 1.2rem;
+  transition: background 0.2s, color 0.2s, box-shadow 0.2s;
+  box-shadow: 0 2px 8px rgba(25, 118, 210, 0.08);
+}
+
+.resume-btn:hover {
+  background: #fff;
+  color: #1976d2 !important;
+  box-shadow: 0 4px 16px rgba(25, 118, 210, 0.15);
+  border: 1.5px solid #1976d2;
+}
+
+/* About Section Styles */
+.about-section {
+  display: flex;
+  align-items: stretch;
+  min-height: 60vh;
+  background: var(--background);
+  padding: 60px 0;
+}
+
+.about-img-wrapper {
+  flex: 1;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  min-width: 300px;
+  max-width: 450px;
+  position: relative;
+}
+
+.torn-img {
+  width: 90%;
+  height: auto;
+  object-fit: cover;
+  /* Torn paper effect using clip-path */
+  clip-path: polygon(
+    0 0, 100% 0, 100% 90%, 95% 100%, 90% 90%, 85% 100%, 80% 90%, 75% 100%, 70% 90%, 65% 100%, 60% 90%, 55% 100%, 50% 90%, 45% 100%, 40% 90%, 35% 100%, 30% 90%, 25% 100%, 20% 90%, 15% 100%, 10% 90%, 5% 100%, 0 90%
+  );
+  border: 4px solid #1976d2;
+  box-shadow: 0 8px 32px rgba(25, 118, 210, 0.15);
+  background: #fff;
+}
+
+.about-content {
+  flex: 2;
+  display: flex;
+  flex-direction: column;
+  justify-content: center;
+  padding: 40px 30px;
+}
+
+.education {
+  margin-bottom: 2rem;
+}
+
+.education h4 {
+  color: #1976d2;
+  margin-bottom: 1rem;
+}
+
+.education ul {
+  color: #64FFDA;
+  list-style: none;
+  padding: 0;
+}
+
+.education li {
+  margin-bottom: 10px;
+  font-size: 1.1rem;
+}
+
+.hobbies {
+  margin-bottom: 1rem;
+}
+
+.hobbies a {
+  color: #64FFDA;
+  text-decoration: underline;
+  transition: color 0.2s;
+}
+
+.hobbies a:hover {
+  color: #1976d2;
+}
+
+/* Main section headings: uniform size and color */
+.heading-gradient, h2.section-heading {
+  color: #1976d2 !important;
+  background: none !important;
+  -webkit-background-clip: unset !important;
+  -webkit-text-fill-color: unset !important;
+  background-clip: unset !important;
+  font-size: clamp(2rem, 5vw, 3rem) !important;
+  font-weight: 700 !important;
+  letter-spacing: 1px;
+  text-align: center;
+  margin-bottom: 2rem;
+}

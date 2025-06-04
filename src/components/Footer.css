@@ -1,0 +1,15 @@
+.footer {
+  background: var(--navy);
+  color: #fff;
+  padding: 1rem 0;
+  text-align: center;
+}
+
+.footer a {
+  color: #fff !important;
+  transition: color 0.2s;
+}
+
+.footer a:hover {
+  color: #ffd700 !important;
+}

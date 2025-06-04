@@ -1,0 +1,10 @@
+User requested file: /personal-portfolio/personal-portfolio/public/robots.txt
+
+User requested content:
+
+User requested content for the robots.txt file, which is used to control how search engines index the site.
+
+Here is the content for the robots.txt file:
+
+User-agent: *
+Disallow:
