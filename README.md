@@ -48,15 +48,6 @@ portfolio_amogh/
 | 🛠️ **Reusable Components** | Modular React components for easy customization and maintenance.                              |
 
 ---
-
-## 🔍 Quick Preview
-
-| Home                      | Projects                   | Skills & Contact         |
-|---------------------------|----------------------------|-------------------------|
-| ![Home](public/screenshots/home.gif) | ![Projects](public/screenshots/projects.gif) | ![Skills](public/screenshots/skills.gif) |
-
----
-
 ## 🚦 Getting Started
 
 ### 1️⃣ Install
