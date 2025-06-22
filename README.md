@@ -1,102 +1,145 @@
-# 🚀 Personal Portfolio
+# Personal Portfolio
 
-Welcome to the **Personal Portfolio** project! This is a visually appealing, responsive one-page website built with **React.js** and **Bootstrap** to showcase your skills, projects, and contact information.
+A modern, responsive portfolio website built with React, styled-components, and EmailJS.
 
----
+## Features
 
-<p align="center">
-  <img src="https://raw.githubusercontent.com/Amoghbachar2603/portfolio_amogh/main/public/preview.png" alt="Portfolio Screenshot" width="80%"/>
-</p>
+- Fixed navigation bar with smooth scrolling
+- Hero, About, Skills, Projects, Contact sections
+- Projects and skills loaded from data files
+- Contact form with EmailJS integration
+- Responsive design with mobile hamburger menu
+- Dark, modern aesthetic inspired by brittanychiang.com
 
----
+## Setup
 
-## 🗂️ Project Structure
+1. Clone the repo and install dependencies:
+   ```sh
+   npm install
+   ```
 
-```plaintext
-portfolio_amogh/
-├── public/
-│   ├── index.html         # Main HTML template
-│   ├── resume.pdf         # Downloadable resume
-├── src/
-│   ├── components/
-│   │   ├── Header.js
-│   │   ├── About.js
-│   │   ├── Skills.js
-│   │   ├── Projects.js
-│   │   ├── ContactForm.js
-│   │   ├── Footer.js
-│   │   ├── Navbar.js
-│   │   └── ThemeToggle.js
-│   ├── App.js
-│   ├── App.css
-│   ├── index.js
-│   └── theme.js
-├── package.json
-└── README.md
-```
+2. Create a `.env` file in the root with your EmailJS credentials:
+   ```
+   REACT_APP_EMAILJS_SERVICE_ID=your_service_id
+   REACT_APP_EMAILJS_TEMPLATE_ID=your_template_id
+   REACT_APP_EMAILJS_USER_ID=your_user_id
+   ```
 
----
+3. Add your assets:
+   - Place your avatar image in `src/assets/avatar.jpg`
+   - Add skill icons in `src/assets/` (e.g., react.png, js.png, etc.)
+   - Add project images in `src/assets/` (e.g., portfolio.png, ecommerce.png, etc.)
 
-## ✨ Features
+4. Start the development server:
+   ```sh
+   npm start
+   ```
 
-| Feature           | Description                                                                                         |
-|-------------------|-----------------------------------------------------------------------------------------------------|
-| 🎨 **Responsive** | Looks great on desktop, tablet, and mobile devices.                                                 |
-| 🌗 **Theme Toggle** | Easily switch between Light and Dark modes with a single click.                                   |
-| 🖱️ **Smooth Scroll** | Navigation links smoothly scroll to each section.                                                 |
-| 📄 **Download Resume** | Resume is available for download in the navbar.                                                  |
-| 🛠️ **Reusable Components** | Modular React components for easy customization and maintenance.                              |
+## Customization
 
----
-## 🚦 Getting Started
+1. Update personal information:
+   - Edit `src/components/Hero.jsx` to change your name and title
+   - Edit `src/components/About.jsx` to update your bio
+   - Edit `src/components/Footer.jsx` to update social links
 
-### 1️⃣ Install
+2. Update projects and skills:
+   - Edit `src/data/projects.js` to add/remove projects
+   - Edit `src/data/skills.js` to add/remove skills
 
-```bash
-git clone https://github.com/Amoghbachar2603/portfolio_amogh.git
-cd portfolio_amogh
-npm install
-```
+3. Customize theme:
+   - Edit `src/styles/global.js` to change colors and styling
 
-### 2️⃣ Run Locally
+## Deployment
 
-```bash
-npm start
-```
-Visit [http://localhost:3000](http://localhost:3000) in your browser.
+1. Build for production:
+   ```sh
+   npm run build
+   ```
 
-### 3️⃣ Build for Production
+2. Deploy the `build/` folder to your preferred static host:
+   - Netlify
+   - Vercel
+   - GitHub Pages
+   - etc.
 
-```bash
-npm run build
-```
-The production-ready app appears in the `build` folder.
+## Dependencies
 
----
+- React
+- styled-components
+- emailjs-com
+- react-icons
 
-## 💡 Customization
+## License
 
-- **Update Your Info:**  
-  Edit the components in `src/components/` to add your name, projects, skills, and contact details!
-- **Replace Resume:**  
-  Put your own PDF as `public/resume.pdf`.
-- **Edit Styles:**  
-  Tweak `App.css` for custom colors and layouts.
+MIT
 
----
+# Getting Started with Create React App
 
-## 🛠️ Built With
+This project was bootstrapped with [Create React App](https://github.com/facebook/create-react-app).
 
-- [React.js](https://reactjs.org/)
-- [Bootstrap](https://getbootstrap.com/)
+## Available Scripts
 
----
+In the project directory, you can run:
 
-## 📄 License
+### `npm start`
 
-This project is licensed under the MIT License. See the [LICENSE](LICENSE) file for details.
+Runs the app in the development mode.\
+Open [http://localhost:3000](http://localhost:3000) to view it in your browser.
 
----
+The page will reload when you make changes.\
+You may also see any lint errors in the console.
 
-> **Tip:**  
-> Add screenshots or GIFs in the `/public/screenshots/` folder for a more visual README!
+### `npm test`
+
+Launches the test runner in the interactive watch mode.\
+See the section about [running tests](https://facebook.github.io/create-react-app/docs/running-tests) for more information.
+
+### `npm run build`
+
+Builds the app for production to the `build` folder.\
+It correctly bundles React in production mode and optimizes the build for the best performance.
+
+The build is minified and the filenames include the hashes.\
+Your app is ready to be deployed!
+
+See the section about [deployment](https://facebook.github.io/create-react-app/docs/deployment) for more information.
+
+### `npm run eject`
+
+**Note: this is a one-way operation. Once you `eject`, you can't go back!**
+
+If you aren't satisfied with the build tool and configuration choices, you can `eject` at any time. This command will remove the single build dependency from your project.
+
+Instead, it will copy all the configuration files and the transitive dependencies (webpack, Babel, ESLint, etc) right into your project so you have full control over them. All of the commands except `eject` will still work, but they will point to the copied scripts so you can tweak them. At this point you're on your own.
+
+You don't have to ever use `eject`. The curated feature set is suitable for small and middle deployments, and you shouldn't feel obligated to use this feature. However we understand that this tool wouldn't be useful if you couldn't customize it when you are ready for it.
+
+## Learn More
+
+You can learn more in the [Create React App documentation](https://facebook.github.io/create-react-app/docs/getting-started).
+
+To learn React, check out the [React documentation](https://reactjs.org/).
+
+### Code Splitting
+
+This section has moved here: [https://facebook.github.io/create-react-app/docs/code-splitting](https://facebook.github.io/create-react-app/docs/code-splitting)
+
+### Analyzing the Bundle Size
+
+This section has moved here: [https://facebook.github.io/create-react-app/docs/analyzing-the-bundle-size](https://facebook.github.io/create-react-app/docs/analyzing-the-bundle-size)
+
+### Making a Progressive Web App
+
+This section has moved here: [https://facebook.github.io/create-react-app/docs/making-a-progressive-web-app](https://facebook.github.io/create-react-app/docs/making-a-progressive-web-app)
+
+### Advanced Configuration
+
+This section has moved here: [https://facebook.github.io/create-react-app/docs/advanced-configuration](https://facebook.github.io/create-react-app/docs/advanced-configuration)
+
+### Deployment
+
+This section has moved here: [https://facebook.github.io/create-react-app/docs/deployment](https://facebook.github.io/create-react-app/docs/deployment)
+
+### `npm run build` fails to minify
+
+This section has moved here: [https://facebook.github.io/create-react-app/docs/troubleshooting#npm-run-build-fails-to-minify](https://facebook.github.io/create-react-app/docs/troubleshooting#npm-run-build-fails-to-minify)

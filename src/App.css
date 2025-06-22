@@ -1,206 +1,38 @@
-/* Base styles for dark mode */
-body, #root, .bg-dark {
-  background-color: var(--background) !important;
-  color: var(--body) !important;
-  font-family: 'Poppins', 'Inter', 'Roboto', sans-serif;
-  overflow-x: hidden;
+.App {
+  text-align: center;
 }
 
-.card, .bg-card, .footer {
-  background-color: var(--card-bg) !important;
-  color: var(--body) !important;
-  border: 1px solid var(--border) !important;
-  transition: all 0.3s ease;
+.App-logo {
+  height: 40vmin;
+  pointer-events: none;
 }
 
-.navbar .nav-link, .navbar .navbar-brand {
-  color: var(--primary) !important;
-}
-
-a, .btn-link, .btn-outline-light {
-  color: var(--primary) !important;
-  transition: color 0.3s ease;
-}
-
-a:hover, .btn-link:hover, .btn-outline-light:hover {
-  color: var(--accent) !important;
-}
-
-.heading-gradient, h1, h2, h3, h4, h5, h6 {
-  background: var(--blue-gradient);
-  -webkit-background-clip: text;
-  -webkit-text-fill-color: transparent;
-  background-clip: text;
-  font-weight: 700;
-  letter-spacing: 1px;
-}
-
-.lead, p, span, li, label, input, textarea {
-  color: var(--body) !important;
-  font-weight: 400;
-  line-height: 1.6;
-}
-
-.text-muted, .muted {
-  color: var(--muted) !important;
-}
-
-.footer {
-  background: var(--card-bg) !important;
-  color: var(--body) !important;
-  border-top: 1px solid var(--border);
-  padding: 2rem 0;
-}
-
-.footer a {
-  color: var(--primary) !important;
-  transition: color 0.2s;
-}
-
-.footer a:hover {
-  color: var(--accent) !important;
-}
-
-/* Responsive styles */
-img, video {
-  max-width: 100%;
-  height: auto;
-}
-
-.container, .container-fluid {
-  padding-right: 1rem;
-  padding-left: 1rem;
-}
-
-@media (max-width: 991px) {
-  h1 {
-    font-size: 2.5rem;
-  }
-  h2 {
-    font-size: 2rem;
-  }
-  h3 {
-    font-size: 1.75rem;
-  }
-  .lead {
-    font-size: 1.1rem;
-  }
-  .container {
-    padding-right: 1rem;
-    padding-left: 1rem;
+@media (prefers-reduced-motion: no-preference) {
+  .App-logo {
+    animation: App-logo-spin infinite 20s linear;
   }
 }
 
-@media (max-width: 768px) {
-  h1 {
-    font-size: 2rem;
-  }
-  h2 {
-    font-size: 1.75rem;
-  }
-  h3 {
-    font-size: 1.5rem;
-  }
-  p, .lead {
-    font-size: 1rem;
-  }
-  .card {
-    margin-bottom: 1rem;
-  }
-  .container {
-    padding-right: 0.75rem;
-    padding-left: 0.75rem;
-  }
+.App-header {
+  background-color: #282c34;
+  min-height: 100vh;
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  justify-content: center;
+  font-size: calc(10px + 2vmin);
+  color: white;
 }
 
-@media (max-width: 576px) {
-  h1 {
-    font-size: 1.75rem;
+.App-link {
+  color: #61dafb;
+}
+
+@keyframes App-logo-spin {
+  from {
+    transform: rotate(0deg);
   }
-  h2 {
-    font-size: 1.5rem;
-  }
-  h3 {
-    font-size: 1.25rem;
-  }
-  .container {
-    padding-right: 0.5rem;
-    padding-left: 0.5rem;
-  }
-  .card {
-    padding: 1rem;
-  }
-}
-
-/* Light mode */
-body.light-mode, #root.light-mode {
-  background-color: #fff !important;
-  color: #222 !important;
-}
-
-body.light-mode .card,
-body.light-mode .bg-card,
-body.light-mode .footer {
-  background-color: #f8f9fa !important;
-  color: #222 !important;
-  box-shadow: 0 2px 4px rgba(0,0,0,0.1);
-}
-
-body.light-mode .navbar,
-body.light-mode .bg-navy {
-  background-color: #e3eafc !important;
-}
-
-body.light-mode .navbar .nav-link,
-body.light-mode .navbar .navbar-brand {
-  color: #0a2342 !important;
-}
-
-body.light-mode .heading-gradient, 
-body.light-mode h1, 
-body.light-mode h2, 
-body.light-mode h3, 
-body.light-mode h4, 
-body.light-mode h5, 
-body.light-mode h6 {
-  background: linear-gradient(90deg, #0D6EFD 0%, #64FFDA 100%);
-  -webkit-background-clip: text;
-  -webkit-text-fill-color: transparent;
-  background-clip: text;
-}
-
-/* Grid system responsive adjustments */
-.row {
-  margin-right: -0.5rem;
-  margin-left: -0.5rem;
-}
-
-.col, [class*="col-"] {
-  padding-right: 0.5rem;
-  padding-left: 0.5rem;
-}
-
-/* Form elements responsive styles */
-input, textarea, select, .form-control {
-  max-width: 100%;
-  font-size: 1rem;
-}
-
-@media (max-width: 576px) {
-  input, textarea, select, .form-control {
-    font-size: 16px; /* Prevents zoom on mobile devices */
-  }
-}
-
-/* Button responsive styles */
-.btn {
-  white-space: normal;
-  word-wrap: break-word;
-}
-
-@media (max-width: 576px) {
-  .btn {
-    width: 100%;
-    margin-bottom: 0.5rem;
+  to {
+    transform: rotate(360deg);
   }
 }

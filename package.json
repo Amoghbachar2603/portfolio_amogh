@@ -1,20 +1,20 @@
 {
-  "name": "personal-portfolio",
-  "version": "1.0.0",
+  "name": "amoghport",
+  "version": "0.1.0",
   "private": true,
   "dependencies": {
-    "animate.css": "^4.1.1",
-    "aos": "^2.3.4",
-    "bootstrap": "^5.3.6",
-    "bootstrap-icons": "^1.13.1",
+    "@testing-library/dom": "^10.4.0",
+    "@testing-library/jest-dom": "^6.6.3",
+    "@testing-library/react": "^16.3.0",
+    "@testing-library/user-event": "^13.5.0",
     "emailjs-com": "^3.2.0",
-    "framer-motion": "^12.15.0",
     "react": "^19.1.0",
-    "react-bootstrap": "^2.10.10",
     "react-dom": "^19.1.0",
     "react-icons": "^5.5.0",
     "react-scripts": "5.0.1",
-    "react-scroll": "^1.9.3"
+    "react-scroll": "^1.9.3",
+    "styled-components": "^6.1.19",
+    "web-vitals": "^2.1.4"
   },
   "scripts": {
     "start": "react-scripts start",

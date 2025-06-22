@@ -1,25 +1,25 @@
 {
-  "short_name": "Personal Portfolio",
-  "name": "My Personal Portfolio",
+  "short_name": "Amogh B Achar",
+  "name": "Amogh B Achar | Full Stack Developer",
   "icons": [
     {
-      "src": "favicon.ico",
+      "src": "logo2.PNG",
       "sizes": "64x64 32x32 24x24 16x16",
-      "type": "image/x-icon"
+      "type": "image/png"
     },
     {
-      "src": "logo192.png",
+      "src": "logo2.PNG",
       "type": "image/png",
       "sizes": "192x192"
     },
     {
-      "src": "logo512.png",
+      "src": "logo2.PNG",
       "type": "image/png",
       "sizes": "512x512"
     }
   ],
   "start_url": ".",
   "display": "standalone",
-  "theme_color": "#ffffff",
-  "background_color": "#ffffff"
+  "theme_color": "#7c3aed",
+  "background_color": "#111827"
 }
