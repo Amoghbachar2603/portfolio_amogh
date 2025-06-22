@@ -113,7 +113,7 @@ const Contact = () => {
 
   return (
     <ContactSection id="contact">
-      <SectionTitle>Contact</SectionTitle>
+      <SectionTitle>Get In Touch </SectionTitle>
       <Form ref={form} onSubmit={handleSubmit}>
         <Input name="user_name" placeholder="Your Name" required />
         <Input name="user_email" type="email" placeholder="Your Email" required />
