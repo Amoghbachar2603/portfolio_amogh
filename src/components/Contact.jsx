@@ -2,6 +2,21 @@ import React, { useRef, useState } from "react";
 import styled from "styled-components";
 import emailjs from "emailjs-com";
 
+// Consistent section title styling
+const SectionTitle = styled.h2`
+  text-align: center;
+  font-size: 2.5rem;
+  color: ${({ theme }) => theme.primary};
+  margin-bottom: 3rem;
+  font-family: "Poppins", sans-serif;
+  font-weight: 700;
+  text-shadow: 0 2px 4px rgba(0, 0, 0, 0.1);
+
+  @media (max-width: 768px) {
+    font-size: 2rem;
+  }
+`;
+
 const ContactSection = styled.section`
   padding: 6rem 2rem;
   background: ${({ theme }) => theme.sectionBg};
@@ -78,10 +93,10 @@ const Contact = () => {
 
     emailjs
       .sendForm(
-        process.env.REACT_APP_EMAILJS_SERVICE_ID,
-        process.env.REACT_APP_EMAILJS_TEMPLATE_ID,
+        "service_g09o86j", // Service ID
+        "template_ymmk4ur", // Template ID
         form.current,
-        process.env.REACT_APP_EMAILJS_USER_ID
+        "IGKRvJFo0TXLli3xQ" // Public API key
       )
       .then(
         () => {
@@ -98,7 +113,7 @@ const Contact = () => {
 
   return (
     <ContactSection id="contact">
-      <h2>Contact</h2>
+      <SectionTitle>Contact</SectionTitle>
       <Form ref={form} onSubmit={handleSubmit}>
         <Input name="user_name" placeholder="Your Name" required />
         <Input name="user_email" type="email" placeholder="Your Email" required />
@@ -113,4 +128,4 @@ const Contact = () => {
   );
 };
 
-export default Contact; 
+export default Contact;
